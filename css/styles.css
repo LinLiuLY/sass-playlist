@@ -27,21 +27,25 @@ li {
   background: #032f3e; }
   #main-nav ul {
     width: 100%; }
+    #main-nav ul:after {
+      content: "";
+      display: block;
+      clear: both; }
   #main-nav li {
     float: left;
-    width: 14%;
+    width: 16.66667%;
     list-style-type: none; }
+    @media screen and (max-width: 600px) {
+      #main-nav li {
+        width: 100%; } }
   #main-nav a {
     color: #f8f9fb;
     display: block;
     text-decoration: none;
     text-align: center;
     padding: 16px; }
-
-#main-nav ul:after {
-  content: "";
-  display: block;
-  clear: both; }
+    #main-nav a:hover {
+      background: #04455b; }
 
 section h1 {
   font-size: 24px;
@@ -63,6 +67,9 @@ section h1 {
     display: block;
     text-transform: uppercase;
     font-weight: bold; }
+    @media screen and (max-width: 3000px) and (min-width: 1200px) {
+      .lead-banner span {
+        font-size: 68px; } }
   .lead-banner span.title {
     font-weight: normal;
     margin-bottom: 14px; }
@@ -82,6 +89,9 @@ section h1 {
     display: block;
     text-transform: uppercase;
     font-weight: bold; }
+    @media screen and (max-width: 3000px) and (min-width: 1200px) {
+      .lessons-banner span {
+        font-size: 68px; } }
   .lessons-banner span.title {
     font-weight: normal;
     margin-bottom: 14px; }
@@ -91,3 +101,35 @@ section h1 {
     max-width: 500px;
     margin: 60px 0;
     list-style-type: none; }
+
+#services {
+  margin-bottom: 60px; }
+  #services li {
+    float: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    width: 33.33333%; }
+  #services img {
+    width: 60%;
+    margin: 20px 20%; }
+  #services a {
+    text-decoration: none;
+    color: #032f3e;
+    font-weight: bold; }
+    #services a:hover {
+      color: #3e1203; }
+  #services ul {
+    width: 100%; }
+    #services ul:after {
+      content: "";
+      display: block;
+      clear: both; }
+
+#projects li {
+  float: left;
+  width: 12.66667%;
+  margin-right: 2%;
+  margin-left: 2%; }
+  #projects li img {
+    width: 100%; }

@@ -5,11 +5,15 @@
     background: $deepBule;
     ul {
         width: 100%;
+        @include clearFix;
     }
     li {
         float: left;
-        width: 14%;
+        width: (100% / 6);
         list-style-type: none;
+        @include mQ(600px) {
+            width: 100%;
+        }
     }
     a {
         color: $offWhite;
@@ -17,13 +21,10 @@
         text-decoration: none;
         text-align: center;
         padding: 16px;
+        &:hover {
+            background: lighten($color: $deepBule, $amount: 6)
+        }
     }
-}
-
-#main-nav ul:after {
-    content: "";
-    display: block;
-    clear: both;
 }
 
 section h1 {
@@ -44,5 +45,40 @@ section h1 {
         max-width: 500px;
         margin: 60px 0;
         list-style-type: none;
+    }
+}
+
+#services {
+    margin-bottom: 60px;
+    li {
+        float: left;
+        box-sizing: border-box;
+        text-align: center;
+        width: (100% / 3)
+    }
+    img {
+        width: 60%;
+        margin: 20px 20%;
+    }
+    a {
+        text-decoration: none;
+        color: $deepBule;
+        font-weight: bold;
+        &:hover {
+            color: complement($color: $deepBule)
+        }
+    }
+    ul {
+        @include clearFix;
+        width: 100%;
+    }
+}
+
+#projects {
+    li {
+        @include grid(6, 2%);
+        img {
+            width: 100%;
+        }
     }
 }
