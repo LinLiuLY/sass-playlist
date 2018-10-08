@@ -126,10 +126,19 @@ section h1 {
       display: block;
       clear: both; }
 
+#projects ul {
+  width: 100%; }
+  #projects ul:after {
+    content: "";
+    display: block;
+    clear: both; }
+
 #projects li {
   float: left;
   width: 12.66667%;
   margin-right: 2%;
   margin-left: 2%; }
+  #projects li:nth-child(6n) {
+    margin-right: 0; }
   #projects li img {
     width: 100%; }

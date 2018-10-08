@@ -75,6 +75,10 @@ section h1 {
 }
 
 #projects {
+    ul {
+        @include clearFix;
+        width: 100%;
+    }
     li {
         @include grid(6, 2%);
         img {

@@ -38,9 +38,9 @@
     width: ((100% - (($cols) * 2 * $margin)) / $cols );
     margin-right: $margin;
     margin-left: $margin;
-    // &:nth-child(#{$cols}n) {
-    //     margin-right: 0;
-    // };
+    &:nth-child(#{$cols}n) {
+        margin-right: 0;
+    };
 }
 
 @mixin mQ($arg...) {
